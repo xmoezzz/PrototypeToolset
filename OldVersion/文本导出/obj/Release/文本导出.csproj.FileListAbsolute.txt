@@ -1,0 +1,8 @@
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\文本导出\bin\Release\文本导出.exe
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\文本导出\bin\Release\文本导出.pdb
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\文本导出\bin\Release\CodeTable.dll
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\文本导出\bin\Release\CodeTable.pdb
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\文本导出\bin\Release\CodeTable.xml
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\文本导出\obj\Release\文本导出.csprojResolveAssemblyReference.cache
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\文本导出\obj\Release\文本导出.exe
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\文本导出\obj\Release\文本导出.pdb

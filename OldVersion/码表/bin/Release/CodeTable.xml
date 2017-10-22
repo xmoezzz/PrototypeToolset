@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeTable</name>
+    </assembly>
+    <members>
+        <member name="T:CODETABLE.CodeTable">
+            <summary>
+            JIS码表
+            </summary>
+        </member>
+        <member name="F:CODETABLE.CodeTable.MaxNum">
+            <summary>
+            码表最大容量
+            </summary>
+        </member>
+        <member name="F:CODETABLE.CodeTable.NumOfHead">
+            <summary>
+            码表前部的容量
+            </summary>
+        </member>
+        <member name="M:CODETABLE.CodeTable.#ctor">
+            <summary>
+            初始化为空码表
+            </summary>
+        </member>
+        <member name="M:CODETABLE.CodeTable.#ctor(System.String)">
+            <summary>
+            从文件中创建码表
+            </summary>
+            <param name="name">文件名</param>
+        </member>
+        <member name="M:CODETABLE.CodeTable.#ctor(CODETABLE.CodeTable.InitType)">
+            <summary>
+            码表初始化
+            </summary>
+            <param name="initType">初始化的类型</param>
+        </member>
+        <member name="M:CODETABLE.CodeTable.JIS2UCS(System.Int32)">
+            <summary>
+            由JIS查UCS
+            </summary>
+            <param name="jis"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CODETABLE.CodeTable.UCS2JIS(System.Int32)">
+            <summary>
+            由UCS查JIS
+            </summary>
+            <param name="ucs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CODETABLE.CodeTable.I2JIS(System.Int32)">
+            <summary>
+            由i查jis
+            </summary>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CODETABLE.CodeTable.JIS2I(System.Int32)">
+            <summary>
+            由jis查i
+            </summary>
+            <param name="jis"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CODETABLE.CodeTable.Add(System.Int32)">
+            <summary>
+            添加一个UCS到码表
+            若该UCS已存在或添加成功，返回该UCS对应的JIS
+            </summary>
+            <param name="ucs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CODETABLE.CodeTable.IsJIS(System.Int32)">
+            <summary>
+            判断一个值是否为JIS
+            </summary>
+            <param name="jis"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CODETABLE.CodeTable.WriteToFile(System.String)">
+            <summary>
+            将码表写到文件
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="P:CODETABLE.CodeTable.Num">
+            <summary>
+            码表当前所含字符数
+            </summary>
+        </member>
+        <member name="P:CODETABLE.CodeTable.Index">
+            <summary>
+            获取或设置添加的位置
+            </summary>
+        </member>
+        <member name="P:CODETABLE.CodeTable.Item(System.Int32)">
+            <summary>
+            获取第i个编码的UCS值
+            </summary>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CODETABLE.CodeTable.InitType">
+            <summary>
+            初始化类型
+            </summary>
+        </member>
+        <member name="F:CODETABLE.CodeTable.InitType.Empty">
+            <summary>
+            空码表
+            </summary>
+        </member>
+        <member name="F:CODETABLE.CodeTable.InitType.DftJIS">
+            <summary>
+            默认的JIS码表
+            </summary>
+        </member>
+        <member name="F:CODETABLE.CodeTable.InitType.DftJIS_HeadPart">
+            <summary>
+            默认的JIS码表（只有开头部分）
+            </summary>
+        </member>
+        <member name="T:CODETABLE.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:CODETABLE.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:CODETABLE.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

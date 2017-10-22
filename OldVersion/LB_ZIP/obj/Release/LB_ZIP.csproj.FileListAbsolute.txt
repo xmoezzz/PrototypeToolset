@@ -1,0 +1,5 @@
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\LB_ZIP\bin\Release\LB_ZIP.dll
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\LB_ZIP\bin\Release\LB_ZIP.pdb
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\LB_ZIP\obj\Release\LB_ZIP.dll
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\LB_ZIP\obj\Release\LB_ZIP.pdb
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\LB_ZIP\obj\Release\LB_ZIP.csprojResolveAssemblyReference.cache

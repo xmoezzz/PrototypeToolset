@@ -1,0 +1,7 @@
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\补丁准备\bin\Release\补丁准备.exe
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\补丁准备\bin\Release\补丁准备.pdb
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\补丁准备\obj\Release\补丁准备.csprojResolveAssemblyReference.cache
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\补丁准备\obj\Release\补丁准备.Properties.Resources.resources
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\补丁准备\obj\Release\补丁准备.csproj.GenerateResource.Cache
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\补丁准备\obj\Release\补丁准备.exe
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\补丁准备\obj\Release\补丁准备.pdb

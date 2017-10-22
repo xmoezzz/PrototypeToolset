@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartArguments>.\TEMP\LB.bin .\TEMP\temp.pgf.txt .\_输出目录\PSP_GAME\USRDIR\X5PARTS\jis2ucs.bin</StartArguments>
+    <StartWorkingDirectory>D:\Downloads\PSP\PSP_Game\LB\导入程序</StartWorkingDirectory>
+  </PropertyGroup>
+</Project>

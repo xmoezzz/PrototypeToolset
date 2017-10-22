@@ -1,0 +1,23 @@
+//0x8140-0x2101
+
+endian big
+log memory_file 0 0
+
+get size asize
+math files = size
+math files -= 0x4240
+math files /= 2
+set const short 0x813f
+goto 0x4240
+for i = 0 < files
+	get null short
+	if null != 0
+		put const short memory_file
+	else
+		put 0 short memory_file
+	endif
+	math const += 1
+next i
+
+get jis_size asize memory_file
+log "jis.bin" 0 jis_size memory_file

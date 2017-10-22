@@ -1,0 +1,8 @@
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\汉化补丁\bin\Release\LBCE汉化＆合盘补丁.exe
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\汉化补丁\bin\Release\LBCE汉化＆合盘补丁.pdb
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\汉化补丁\obj\Release\汉化补丁.csprojResolveAssemblyReference.cache
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\汉化补丁\obj\Release\汉化补丁.Form1.resources
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\汉化补丁\obj\Release\汉化补丁.Properties.Resources.resources
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\汉化补丁\obj\Release\汉化补丁.csproj.GenerateResource.Cache
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\汉化补丁\obj\Release\LBCE汉化＆合盘补丁.exe
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\汉化补丁\obj\Release\LBCE汉化＆合盘补丁.pdb

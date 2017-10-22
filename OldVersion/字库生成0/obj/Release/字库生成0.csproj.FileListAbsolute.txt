@@ -1,0 +1,7 @@
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\字库生成0\bin\Release\字库生成0.exe
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\字库生成0\bin\Release\字库生成0.pdb
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\字库生成0\obj\Release\字库生成0.csprojResolveAssemblyReference.cache
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\字库生成0\obj\Release\字库生成0.Properties.Resources.resources
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\字库生成0\obj\Release\字库生成0.csproj.GenerateResource.Cache
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\字库生成0\obj\Release\字库生成0.exe
+E:\LBCE(PSP)资料(更新)\程序源码(C#2010)\字库生成0\obj\Release\字库生成0.pdb
