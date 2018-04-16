@@ -1,0 +1,1 @@
+prxtool -n psplibdoc_660.xml -o output.idc EBOOT.BIN
