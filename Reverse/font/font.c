@@ -419,7 +419,7 @@ int __fastcall sjis_code_to_index(int result)
     v2 = v1 - 0x81;
   }
   if ( (signed int)(unsigned __int8)result >= 64 && (signed int)(unsigned __int8)result <= 0x7E )
-    return (unsigned __int8)result + 188 * v2 + 192;
+    return (unsigned __int8)result + 0xBC * v2 + 192;
   if ( (signed int)(unsigned __int8)result < 0x80 || (signed int)(unsigned __int8)result > 0xFC )
     return -1;
   return (unsigned __int8)result + 0xBC * v2 + 0xBF;
