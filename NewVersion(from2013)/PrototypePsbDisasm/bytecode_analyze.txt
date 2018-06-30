@@ -1,0 +1,352 @@
+prototype vm for siglusengine:
+
+我没做完整的解析，反正用于做翻译已经绰绰有余了。
+
+VMVar:
+0 : none
+1 : int32
+2 : string
+
+0x01 : cmdSetTitle
+    str = stack.pop()
+
+0x02 : cmdSetChapter
+    str = stack.pop();
+    index1 = stack.pop();
+    index2 = stack.pop();
+
+0x07 : cmdGetPrefont
+    font_name = stack.pop();
+
+0x08 : cmdGetPreLoad
+    pre_load = stack.pop();
+
+0x09 : cmdFarcall (from other script)
+    psb_script_name = stack.pop();
+    offset = stack.pop(); (???)
+
+0x0A : cmdFarreturn 
+    (none)
+
+0x0B : cmdWaitBgm
+    bgm_index = stack.pop();
+
+0x0C : cmdSyscall
+    syscall_no = stack.pop();
+
+0x0D : cmdJmp
+    offset = stack.pop();
+
+0x0E : cmdFarJmp
+    psb_script_name = stack.pop();
+    offset = stack.pop();
+
+0x0F : cmdWait
+    p1 = stack.pop();
+    p2 = stack.pop();
+
+0x10 : cmdMsg
+    p1 = stack.pop();
+    p2 = stack.pop();
+    s1 = stack.pop();
+    s2 = stack.pop();
+
+0x11 : cmdMsgStart
+
+0x12 : cmdMsgWaitButton
+
+0x13 : ??
+    
+0x14 : cmdMsgClear
+    p1 = stack.pop();
+
+0x15 : cmdMsgColor
+    p1 = stack.pop();
+
+0x16 : cmdMsgClose
+
+0x17 : cmdMsgSize
+    size = stack.pop();
+
+0x18 : cmdMsgFrameType 
+    type = stack.pop();
+
+0x19 - 0x1E : ??
+
+0x1F : cmdMsgSel
+    unk = stack.pop();
+    sel_cnt = stack.pop();
+    default_index = stack.pop();
+    
+    for(size_t i = 0; i < sel_cnt; i++)
+    {
+        sel_offset[i] = stack.pop();
+        sel_name[i] = stack.pop();
+    }
+
+0x20 : cmdCGLoad
+    index = stack.pop();
+    name  = stack.pop();
+
+0x21 : cmdCGAttibute
+    index = stack.pop();
+    p1 = stack.pop();
+    p2 = stack.pop();
+
+0x22 : ??
+
+0x23 : cmdCGFade
+    index = stack.pop();
+    fade = stack.pop();
+
+0x24 : cmdCGDel
+    index = stack.pop();
+
+0x25 : cmdCGSprite
+    index = stack.pop();
+    p1 = stack.pop();
+    p2 = stack.pop();
+    p3 = stack.pop();
+    p4 = stack.pop();
+    p5 = stack.pop();
+
+0x26 : cmdCGScroll
+    index = stack.pop();
+    p1 = stack.pop();
+    p2 = stack.pop();
+    p3 = stack.pop();
+    p4 = stack.pop();
+    p5 = stack.pop();
+
+0x27 - 0x2F : ??
+
+0x30 : cmdBGMPlay
+    filename = stack.pop();
+    p1 = stack.pop();
+    p2 = stack.pop();
+
+0x31 : cmdBGMStop
+    index = stack.pop();
+
+0x32 : cmdBGMVolume
+    index = stack.pop();
+    vol = stack.pop();
+
+0x33 - 0x37 : ??
+
+0x38 : cmdPCMPlay
+    index = stack.pop();
+    name  = stack.pop();
+    p1    = stack.pop();
+
+0x39 : cmdPCMStop
+    index = stack.pop();
+    p1    = stack.pop();
+
+0x3A : cmdPCMVolume
+    index = stack.pop();
+    p1 = stack.pop();
+    p2 = stack.pop();
+
+0x3B : cmdWaitPCM
+    index = stack.pop();
+    time = stack.pop();
+
+0x3C - 0x3F : ??
+
+0x40 : cmdShake
+    p1 = stack.pop();
+    p2 = stack.pop();
+    p3 = stack.pop();
+
+0x41 : cmdVibration (for PS3)
+    p1 = stack.pop();
+    p2 = stack.pop();
+
+0x42 : cmdAchievement 
+    p1 = stack.pop();
+    p2 = stack.pop();
+
+0x43 : ??
+
+0x44 : cmdMoviePlay
+    filename = stack.pop();
+    p1 = stack.pop();
+
+0x45 : cmdAnmClear
+    ??
+
+0x46 : cmdAnmAdd
+    ??
+
+0x47 : cmdAnmStart
+    ??
+
+0x48 : cmdAnmStop
+    ??
+
+0x49 : cmdEventRead
+    p1 = stack.pop();
+    p2 = stack.pop();
+    p3 = stack.pop();
+
+0x4A : cmdEventWrite
+    p1 = stack.pop();
+    p2 = stack.pop();
+    p3 = stack.pop();
+
+0x4B : cmdEventExec
+    p1 = stack.pop();
+    p2 = stack.pop();
+
+0x4C - 0x4F : ??
+
+0x50 : cmdGetStrPosToIntArray
+    main_str = stack.pop();
+    sub_str = stack.pop();
+    start_pos = stack.pop();
+    index = stack.pop();
+
+
+0x51 : cmdGetStrlenToIntArray
+    intarray_index = stack.pop();
+    str = stack.pop();
+    stack.intarray[intarray_index] = str.length();
+
+0x52 : cmdGetSystemStr (name)
+    name_index = stack.pop();
+    stringarray_index = stack.pop();
+    stack.stringarray[stringarray_index] = engine.GetGlobalCfgName(name_index);
+    name_index (0: name, 1:family name)
+
+
+0xB0 : cmdAdd
+    p1 = stack.pop();
+    p2 = stack.pop();
+    stack.push(p1 + p2)
+
+0xB1 : cmdSub
+    p1 = stack.pop();
+    p2 = stack.pop();
+    stack.push(p1 - p2)
+
+0xB2 : cmdMul
+    p1 = stack.pop();
+    p2 = stack.pop();
+    stack.push(p1 * p2)
+
+0xB3 : cmdDiv
+    p1 = stack.pop();
+    p2 = stack.pop();
+    stack.push(p1 / p2)
+
+0xB4 : cmdMod
+    p1 = stack.pop();
+    p2 = stack.pop();
+    stack.push(p1 % p2)
+
+0xB5 : cmdAnd 
+    p1 = stack.pop();
+    p2 = stack.pop();
+    stack.push(p1 & p2)
+
+0xB6 : cmdOr
+    p1 = stack.pop();
+    p2 = stack.pop();
+    stack.push(p1 | p2)
+
+0xB7 : cmdNot
+    p1 = stack.pop();
+    stack.push(!p1);
+
+0xB8 : cmdEQ
+    p1 = stack.pop();
+    p2 = stack.pop();
+    stack.push(p1 == p2)
+
+0xB9 : cmdNEQ
+    p1 = stack.pop();
+    p2 = stack.pop();
+    stack.push(p1 != p2)
+
+0xBA : cmdLEQ
+    p1 = stack.pop();
+    p2 = stack.pop();
+    stack.push(p1 >= p2)
+
+0xBB : cmdREQ
+    p1 = stack.pop();
+    p2 = stack.pop();
+    stack.push(p1 <= p2)
+
+0xBC : cmdLCM
+    p1 = stack.pop();
+    p2 = stack.pop();
+    stack.push(p1 > p2)
+
+0xBD : cmdRCM
+    p1 = stack.pop();
+    p2 = stack.pop();
+    stack.push(p1 < p2)
+
+0xBE : cmdLAND
+    p1 = stack.pop();
+    p2 = stack.pop();
+    stack.push(p1 && p2)
+
+0xBF : cmdLOR
+    p1 = stack.pop();
+    p2 = stack.pop();
+    stack.push(p1 || p2)
+
+0xA2 : cmdPOP
+    op = stack.pop().IntValue & 0xFF
+    index = stack.pop();
+    value = stack.pop();
+
+    op = 1 : stack.intarray[index] = value;
+    op = 2 : stack.stringarray[index] = value;
+    op = 3 : engine.globalflag[index] = value;
+
+0xA3 : cmdIF
+    condition = stack.pop();
+    offset = stack.pop();
+
+0xA4 : cmdLMK
+    (none)
+
+0xF0 : cmdPush
+    2 byte - cmd length
+    1 byte - operation type ( 1: int32, 2: string, 3: push int array, 4 : push string array, 5 : push global int )
+    N bytes- depends on operation type
+
+0xF1 : cmdSPD (show text)
+    2 bytes - cmd length (always 4)
+    4 bytes - index
+
+int32:
+    4 bytes- BE order int32
+
+string:
+    1 byte - string length
+    N bytes- string data
+
+push int array:
+    a = stack.pop()
+    if(a.type != VMType::INT)
+        go failed;
+    stack.push(stack.intarray[a.IntValue])
+
+push string array:
+    a = stack.pop()
+    if(a.type != VMType::INT)
+        go failed;
+    stack.push(stack.stringarray[a.IntValue])
+
+
+push global int(flag):
+    a = stack.pop()
+    if(a.type != VMType::INT)
+        go failed;
+    stack.push(engine.globalflag[a.IntValue])
+
