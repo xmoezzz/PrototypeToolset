@@ -1,0 +1,12 @@
+﻿  PrototypePsbInsert.cpp
+c:\prototypepsbinsert\prototypepsbinsert\prototypepsbinsert.cpp(196): warning C4091: 'typedef ': ignored on left of 'CByteCodePush::iPushType' when no variable is declared
+c:\prototypepsbinsert\prototypepsbinsert\prototypepsbinsert.cpp(297): warning C4267: 'initializing': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\prototypepsbinsert\prototypepsbinsert\prototypepsbinsert.cpp(301): warning C4267: 'initializing': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\prototypepsbinsert\prototypepsbinsert\prototypepsbinsert.cpp(439): warning C4091: 'typedef ': ignored on left of 'CByteCodeLabel::NodeType' when no variable is declared
+c:\prototypepsbinsert\prototypepsbinsert\prototypepsbinsert.cpp(552): warning C4018: '<': signed/unsigned mismatch
+c:\prototypepsbinsert\prototypepsbinsert\prototypepsbinsert.cpp(610): warning C4477: 'sscanf' : format string '%x' requires an argument of type 'unsigned int *', but variadic argument 1 has type 'uint32_t'
+c:\prototypepsbinsert\prototypepsbinsert\prototypepsbinsert.cpp(1682): warning C4101: 'idx': unreferenced local variable
+  Generating code
+  All 1679 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  PrototypePsbInsert.vcxproj -> C:\PrototypePsbInsert\Release\PrototypePsbInsert.exe
